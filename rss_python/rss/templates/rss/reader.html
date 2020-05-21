@@ -1,0 +1,112 @@
+{% extends 'rss/base.html' %}
+
+ 
+{% block body %}
+
+<div class="row h-100">
+    <div class="col-sm-6 mh-100">
+        <div class="container h-100" style="background-color: rgb(189, 195, 197);"><br>
+            
+                <h4>RSS Settings</h4>
+
+                <form class="form">
+
+                    <div class="form-group">
+                        
+                        <label >URL Source</label>
+                        <input type="text" class="form-control mb-2 mr-sm-2" placeholder="Paste URL" autocomplete="on">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Order articles</label>
+                        <select class="form-control mb-2 mr-sm-2" >
+                            <option >Latest</option>
+                            <option >Oldest</option>
+                        </select>
+                    </div>
+                                    
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-block">Show articles</button><br>
+                    </div>
+                    
+                </form>
+
+                <h4>Articles List</h4><br>
+
+                {% if posts %}
+
+                <h4>{{ feed.feed.title }}</h4>
+
+                <!-- {% if feed.entries %} -->
+
+                {% for entry in posts %}
+
+                <ul style="list-style:none">
+
+                    <li><a href="{{ entry.link }}">{{entry.published}}: {{entry.title}} </a></li>
+                
+                </ul>          
+
+
+                {% endfor %}
+
+                {% endif %}
+
+                {% else %}
+
+                <br />
+
+                {% endif %}
+
+                {{ feed2 }}
+      
+        </div>
+    </div>
+
+    <div class="col-sm-6 h-100"  style="background-color:rgb(255, 255, 255);">
+        
+            <br><h4>Articles</h4><br>
+
+            {% if posts %}
+
+            <!-- {% if feed.entries %} -->
+
+            {% for entry in posts %}
+
+            <div class="card" style="width:95%">
+
+                {% if entry.image_url %}
+
+                <img class="card-img-top" src="{{ entry.image_url | safe }}" alt="Article image">
+                
+                {% endif %}
+
+                <div class="card-body">
+                    <h5 class="card-title">{{ entry.title }}</h5>
+                    <p class="card-text">Description: {{ entry.description }}</p>
+                </div>
+
+                <div class="card-footer">
+                    <p>Published: {{ entry.published }}</p>
+                    <a href="{{ entry.link }}" class="btn btn-primary">Read the article</a>
+                </div>
+             
+            </div><br>
+
+            {% endfor %}
+
+            {% endif %}
+
+            {% else %}
+
+            <br />
+
+            {% endif %}
+
+            {{ feed2 }}
+         
+    </div>
+</div>
+
+
+{% endblock %}

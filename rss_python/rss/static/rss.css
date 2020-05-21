@@ -1,0 +1,55 @@
+header {
+    background-color: #252424;
+    padding: 15px;
+    margin-right: 0px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.rows {
+  margin: 20px;
+}
+/* Create two unequal columns that floats next to each other */
+  
+  /* .left {
+    box-sizing: border-box;
+    left: 0;
+    width: 25%;
+    height: 100%;
+  }
+  
+  .right {
+    box-sizing: border-box;
+    right: 0;
+    width: 75%;
+    height: 2000px;
+  } */
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+   
+  }
+/* 
+  .form-group {
+    text-decoration-color: hotpink;
+    max-width: 80%;
+  }
+  
+
+  .form {
+    display: block;
+    width: 80% !important;
+    background-clip: padding-box;
+  } */
+
+
+  

@@ -1,0 +1,6 @@
+asgiref==3.2.7
+Django==3.0.6
+feedparser==5.2.1
+pytz==2020.1
+rope==0.16.0
+sqlparse==0.3.1
