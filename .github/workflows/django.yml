@@ -30,9 +30,7 @@ jobs:
         python manage.py test
     - name: Run Server
       run: |
-        python manage.py runserver >> index.html
-    - name: Push index.html to github-pages
-      run: |
+        python manage.py
         git push github_pages
       
       
