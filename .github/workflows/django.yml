@@ -30,7 +30,7 @@ jobs:
         python manage.py test
     - name: Run Server
       run: |
-        python manage.py
+        python manage.py runserver
         git push github_pages
       
       
