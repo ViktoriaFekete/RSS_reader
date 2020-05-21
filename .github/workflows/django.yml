@@ -24,8 +24,10 @@ jobs:
     - name: Install Dependencies
       run: |
         python -m pip install --upgrade pip
-    - name: Create branch
+    - name: Run server
+      run: python manage.py runserver
+    - name: Push to branch
       run: |
-        git checkout -b github_pages
+        git push github_pages
       
       
