@@ -27,4 +27,4 @@ jobs:
         pip install -r rss_python/mysite/requirements.txt
     - name: Run Server
       run: |
-        python manage.py runserver
+        python rss_python/manage.py runserver
