@@ -27,7 +27,8 @@ jobs:
         pip install -r rss_python/mysite/requirements.txt
     - name: Run Server
       run: |
-        python rss_python/manage.py 
+        python rss_python/manage.py >> index.html
     - name: Push to github pages
       run: |
         git checkout -b github_pages
+      
