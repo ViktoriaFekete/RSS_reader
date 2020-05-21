@@ -36,6 +36,6 @@ jobs:
         git checkout -b github_pages
         git add index.html
         git commit -m "html updated"
-        git push
+        git push --set-upstream origin github_pages
 
       
