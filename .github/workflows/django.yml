@@ -30,6 +30,9 @@ jobs:
         python rss_python/manage.py >> index.html
     - name: Push to github pages
       run: |
+        git config --global user.email "viktoria.fekete97@gmail.com"
+        git config --global user.name "ViktoriaFekete"
+        
         git checkout -b github_pages
         git add index.html
         git commit -m "html updated"
