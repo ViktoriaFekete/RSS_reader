@@ -28,9 +28,5 @@ jobs:
     - name: Run Tests
       run: |
         python manage.py test
-    - name: Run Server
-      run: |
-        python manage.py runserver
-        git push github_pages
       
       
