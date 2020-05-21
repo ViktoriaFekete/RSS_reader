@@ -25,7 +25,9 @@ jobs:
       run: |
         python -m pip install --upgrade pip
     - name: Run server
-      run: python rss_python/manage.py
+      run: |
+        rss_python/mysite/Scripts/activate
+        python rss_python/manage.py runserver
     - name: Push to branch
       run: |
         git push github_pages
