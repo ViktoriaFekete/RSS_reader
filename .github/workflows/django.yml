@@ -27,7 +27,7 @@ jobs:
         pip install -r rss_python/mysite/requirements.txt
     - name: Run Server
       run: |
-        python rss_python/manage.py >> index.html
+        python rss_python/manage.py > index.html
     - name: Push to github pages
       run: |
         git config --global user.email "viktoria.fekete97@gmail.com"
